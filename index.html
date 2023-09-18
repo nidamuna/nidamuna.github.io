@@ -17,6 +17,7 @@
         h1 {
             font-weight: bold;
             text-align: center;
+            font-size: 500px;
         }
 
         a {
@@ -40,8 +41,26 @@
 </head>
 <body>
     <h1>Hello Welcome to my homepage</h1> <br> <br>
-    <a href='https://nidamuna.github.io/portofolio/'>
-       <button>Go to my profile</button>
-    </a>
+   <div style="margin-top: 20px;">
+        <a href='https://nidamuna.github.io/portofolio/'>
+           <button>Go to my profile</button>
+        </a>
+    </div>
+    <div id="lottie-animation"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js"></script>
+    <script>
+        // Menampilkan animasi Lottie
+        const animationContainer = document.getElementById('lottie-animation');
+        const animationData = 'animations/your-animation.json'; // Ganti dengan path file JSON Anda
+
+        const animation = lottie.loadAnimation({
+            container: animationContainer,
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            path: animationData,
+        });
+    </script>
 </body>
 </html>
